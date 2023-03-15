@@ -241,6 +241,22 @@ margin-bottom: 30px;
 
 }
 
+.mobile-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(44, 35, 49);
+    width: 280px;
+    height: 100vh;
+    padding: 30px; 
+}
+
+.mobile-nav .top-menu{
+    display: flex;
+    flex-direction: column;
+}
+
 @media(max-width:992px){
     .project-title{
         font-size: 2vmin;
@@ -276,6 +292,13 @@ margin-bottom: 30px;
     .top nav{
         display: none;
     }
+    .mobile-nav{
+         display: initial;/*  domyślnie*/
+         transform: translateX(-102%);
+         transition: transform 0.4s;
+    }
+
+
     .hamburger{
         display: block;
     }
@@ -308,6 +331,12 @@ margin-bottom: 30px;
     .text2{
         font-weight: 100;
     }
+
+
+.showMenu{
+    transform: translateX(0);
+}
+
 
     
 }
